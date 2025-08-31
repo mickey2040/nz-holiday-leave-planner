@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NZ Holiday Leave Planner - Maximize Your Annual Leave</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌴 NZ Holiday Leave Planner</h1>
+            <p class="tagline">Maximize your annual leave by combining it with public holidays</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="controls-section">
+            <div class="year-selector">
+                <label for="year">Year:</label>
+                <select id="year">
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                </select>
+            </div>
+            
+            <div class="region-selector">
+                <label for="region">Your Region:</label>
+                <select id="region">
+                    <option value="wellington">Wellington</option>
+                    <option value="auckland">Auckland</option>
+                    <option value="canterbury">Canterbury</option>
+                    <option value="otago">Otago</option>
+                    <option value="southland">Southland</option>
+                    <option value="taranaki">Taranaki</option>
+                    <option value="hawkes-bay">Hawke's Bay</option>
+                    <option value="marlborough">Marlborough</option>
+                    <option value="nelson">Nelson</option>
+                    <option value="west-coast">West Coast</option>
+                    <option value="northland">Northland</option>
+                    <option value="gisborne">Gisborne</option>
+                    <option value="bay-of-plenty">Bay of Plenty</option>
+                    <option value="waikato">Waikato</option>
+                    <option value="manawatu-wanganui">Manawatū-Whanganui</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="stats-cards">
+            <div class="stat-card">
+                <h3>Public Holidays</h3>
+                <div class="stat-number" id="publicHolidayCount">0</div>
+                <p>days off work</p>
+            </div>
+            <div class="stat-card">
+                <h3>Long Weekends</h3>
+                <div class="stat-number" id="longWeekendCount">0</div>
+                <p>opportunities</p>
+            </div>
+            <div class="stat-card">
+                <h3>Best Leave Period</h3>
+                <div class="stat-number" id="bestLeaveRatio">-</div>
+                <p>days off for days leave</p>
+            </div>
+        </div>
+
+        <div class="calendar-section">
+            <h2>2025 Calendar</h2>
+            <div id="calendar" class="calendar-grid"></div>
+        </div>
+
+        <div class="opportunities-section">
+            <h2>🎯 Leave Optimization Opportunities</h2>
+            <div id="opportunities" class="opportunities-list"></div>
+        </div>
+
+        <div class="holidays-list-section">
+            <h2>📅 Public Holidays</h2>
+            <div id="holidaysList" class="holidays-list"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Made with ❤️ for Kiwis | 
+                <a href="https://github.com/mickey2040/nz-holiday-leave-planner" target="_blank">View on GitHub</a> | 
+                <button id="exportCalendar" class="export-btn">📥 Export to Calendar</button>
+            </p>
+        </div>
+    </footer>
+
+    <script src="holidays-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
